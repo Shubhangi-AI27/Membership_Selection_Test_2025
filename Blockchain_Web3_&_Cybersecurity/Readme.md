@@ -35,4 +35,4 @@ Let's build the future, together!
 
 
 
-*_May your hashes be strong, your connections secure, and your hashes be strong and your connections secure._*
+*_May your hashes be strong, your connections secure, and may all your contracts execute flawlessly..._*
