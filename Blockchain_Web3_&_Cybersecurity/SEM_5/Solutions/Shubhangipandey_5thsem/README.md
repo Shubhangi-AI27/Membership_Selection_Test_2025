@@ -1,27 +1,27 @@
-#1. Problem Statement
+# 1. Problem Statement
 
-#In today’s digital world, people need to manage multiple accounts, each requiring strong and unique passwords. Storing these passwords in plain text is unsafe, as anyone who gains access to the file can read them directly.
-#The challenge is to securely store and retrieve passwords so that even if the storage file is stolen, the data remains unreadable without the correct encryption key.
+In today’s digital world, people need to manage multiple accounts, each requiring strong and unique passwords. Storing these passwords in plain text is unsafe, as anyone who gains access to the file can read them directly.
+The challenge is to securely store and retrieve passwords so that even if the storage file is stolen, the data remains unreadable without the correct encryption key.
 
-#2. My Approach
+# 2. My Approach
 
-#I made a small program in Python that can:
-#Change a password into a secret code (encrypt it).
-#Save the secret code in a file.
-#Change the secret code back into the real password (decrypt it).
+I made a small program in Python that can:
+   - Change a password into a secret code (encrypt it).
+   - Save the secret code in a file.
+   - Change the secret code back into the real password (decrypt it).
 
-#Why I chose this method:
+## Why I chose this method:
 
-#Python is easy for beginners.
-#The cryptography library does all the hard work of locking and unlocking the password.
-#The program keeps the lock key in a file (secret.key) so only people with this key can unlock the password.
+- Python is easy for beginners.
+- The cryptography library does all the hard work of locking and unlocking the password.
+- The program keeps the lock key in a file (secret.key) so only people with this key can unlock the password.
 
 // Concept and approach for this project were developed with assistance from ChatGPT.
 // This project's code was generated with assistance from OpenAI ChatGPT.
 // Prompt: "give me simple python code for beginner level cybersecurity project a password manager "
 
-#3. Code
-
+# 3. Code
+```python
 from cryptography.fernet import Fernet
 
 # Step 1: Generate and save a key (only once)
@@ -73,4 +73,4 @@ with open("password.txt", "rb") as file:
 
 decrypted_pw = decrypt_password(stored_encrypted_pw)
 print(f" Decrypted password is: {decrypted_pw}")
-
+```
